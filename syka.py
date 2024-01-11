@@ -139,7 +139,7 @@ sys.setrecursionlimit(10**9)
 
 
 # count_0 = bin_i_last_i.count('0')
-# print(count_0)
+# print(count_0)   
 # count_1 = bin_i_last_i.count('1')
 # print(count_1)
 
@@ -311,3 +311,21 @@ if 0 < n_stupenek < 31:
     print(count_of_stupenki(n_stupenek))
 else:
     print("кол-во ступенек должно быть от 1 до 30")
+
+
+# задание на подсчет на макс длинну строк в файле 
+
+
+
+f = open('название файла')
+a = [] # Список, в котором будем хранить строки
+u = [] # список с длиннами строк
+for s in f:
+    s = s.strip()
+    a.append(s)
+f.close()
+for i in a :
+    t = len(i)
+    u.append(t)
+
+print(max(u))
